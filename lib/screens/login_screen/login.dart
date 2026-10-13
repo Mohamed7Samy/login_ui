@@ -6,6 +6,7 @@ import 'package:inst_meters/theme/app_colors.dart';
 import 'package:inst_meters/widgets/app_text_styles.dart';
 import 'package:inst_meters/widgets/custom_main_button.dart';
 import 'package:inst_meters/widgets/custom_text_form_field.dart';
+import 'package:inst_meters/widgets/drawer_widget.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -23,7 +24,21 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.lightBgColor,
+       appBar: AppBar(
+        backgroundColor: AppColors.lightBgColor,
+    leading: Builder(
+      builder: (context) => IconButton(
+        icon: Icon(Icons.menu),
+        onPressed: () {
+          Scaffold.of(context).openDrawer();
+        },
+      ),
+    ),
+  ),
+       drawer: DrawerWidget(),
       body: SafeArea(
+        
         child: SingleChildScrollView(
           child: Form(
             key: _formState,
@@ -36,7 +51,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 84,
                     width: 84,
                     child: Image.asset(
-                      "assets/images/gauge.png",
+                      "assets/images/login.png",
                       width: 44,
                       height: 44,
                     ),

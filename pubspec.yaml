@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
+  flutter_screenutil: ^5.9.3
 
 dev_dependencies:
   flutter_test:
@@ -23,3 +24,6 @@ flutter:
     - assets/images/gauge.png
     - assets/images/user.png
     - assets/images/login.png
+    - assets/images/adadati.png
+    - assets/images/lock.png
+    - assets/images/profile.png
