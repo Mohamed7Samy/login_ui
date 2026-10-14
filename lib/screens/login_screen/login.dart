@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:inst_meters/screens/home_screen/home_screen.dart';
-
+import 'package:inst_meters/screens/register_meter_screen/register_meter_screen.dart';
 import 'package:inst_meters/theme/app_colors.dart';
 import 'package:inst_meters/widgets/app_text_styles.dart';
 import 'package:inst_meters/widgets/custom_main_button.dart';
@@ -118,7 +118,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       width: 22,
                       height: 22,
                     ),
-                    onPressed: () async {},
+                    onPressed: () async {if (!_formState.currentState!.validate()) return;
+                     Navigator.of(context).pushNamed(RegisterMeterScreen.routeName);},
                   ),
                   SizedBox(height: 24),
                   RichText(
