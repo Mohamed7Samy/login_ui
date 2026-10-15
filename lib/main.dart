@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
         themeMode: ThemeMode.dark,
+        initialRoute: LoginScreen.routeName,
        routes: {
     LoginScreen.routeName: (_) => const LoginScreen(),
     RegisterMeterScreen.routeName: (_) => const RegisterMeterScreen(),

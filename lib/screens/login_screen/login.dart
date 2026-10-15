@@ -57,15 +57,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   SizedBox(height: 12),
-                  Positioned(
-                    left: 0,
-                    child: Text(
-                      "أهلاً بك من جديد",
-                      textAlign: TextAlign.left,
-                      style: AppTextStyles.styleS16W700(
-                        color: AppColors.mainColors,
-                      ).copyWith(fontSize: 28),
-                    ),
+                  Text(
+                    "أهلاً بك من جديد",
+                    textAlign: TextAlign.center,
+                    style: AppTextStyles.styleS16W700(
+                      color: AppColors.mainColors,
+                    ).copyWith(fontSize: 28),
                   ),
                   SizedBox(height: 12),
                   Center(
